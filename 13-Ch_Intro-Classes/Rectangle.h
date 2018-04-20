@@ -1,8 +1,7 @@
-// Specification file for the Rectangle class.
+// Specification file for the Rectangle class
+// This version has a constructor.
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
-
-// Rectangle class declaration.
 
 class Rectangle
 {
@@ -10,6 +9,7 @@ class Rectangle
     double width;
     double length; 
   public:
+    Rectangle(double, double);    // Constructor
     void setWidth(double);
     void setLength(double);
 
@@ -22,5 +22,4 @@ class Rectangle
     double getArea() const
       { return width * length; }
 }; 
-
 #endif
