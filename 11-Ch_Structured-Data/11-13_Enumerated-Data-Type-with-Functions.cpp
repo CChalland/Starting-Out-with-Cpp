@@ -3,7 +3,8 @@
 #include <iomanip>
 using namespace std;
 
-enum Day { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY }; 7
+enum Day { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY };
+
 // Function prototype
 void displayDayName(Day);
 
