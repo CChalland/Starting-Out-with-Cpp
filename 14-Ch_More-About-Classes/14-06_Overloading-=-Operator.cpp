@@ -1,7 +1,6 @@
 // This program demonstrates the overloaded = operator
 #include <iostream>
 #include "StudentTestScores.h"
-
 using namespace std;
 
 // Function prototype

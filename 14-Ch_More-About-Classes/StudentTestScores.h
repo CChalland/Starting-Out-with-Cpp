@@ -58,7 +58,7 @@ public:
   { return testScores[index]; }
 
   // Overloaded = operator
-  void operator=(const StudentTestScores &right)
+  const StudentTestScores operator=(const StudentTestScores &right)
   {
     delete [] testScores;
     studentName = right.studentName;
@@ -66,6 +66,7 @@ public:
     testScores = new double[numTestScores];
     for (int i = 0; i < numTestScores; i++)
       testScores[i] = right.testScores[i];
+    return *this;
   }
 };
 
