@@ -122,3 +122,33 @@ bool FeetInches::operator==(const FeetInches &right)
     status = false;
   return status;
 }
+
+//**********************************************
+// Overloaded ostream << operator.             *
+//**********************************************
+
+ostream &operator<<(ostream &strm, const FeetInches &obj)
+{
+  strm << obj.feet << " feet, " << obj.inches << " inches";
+  return strm;
+}
+
+//**********************************************
+// Overloaded istream >> operator.             *
+//**********************************************
+
+istream &operator>>(istream &strm, FeetInches &obj)
+{
+  // Prompt the user for the feet.
+  cout << "Feet: ";
+  strm >> obj.feet;
+
+  // Prompt the user for the inches.
+  cout << "Inches: ";
+  strm >> obj.inches;
+
+  // Normalize the values.
+  obj.simplify();
+
+  return strm;
+}

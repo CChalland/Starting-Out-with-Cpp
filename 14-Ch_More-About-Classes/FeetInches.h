@@ -1,8 +1,16 @@
 #ifndef FEETINCHES_H
 #define FEETINCHES_H
 
-// The FeetInches class holds distance or measurements expressed in feet and inches.
+#include <iostream>
+using namespace std;
 
+class FeetInches;   // Forward Declaration
+
+// Function Prototypes for Overloaded Stream Operators
+ostream &operator<<(ostream &, const FeetInches &);
+istream &operator>>(istream &, FeetInches &); 
+
+// The FeetInches class holds distance or measurements expressed in feet and inches.
 class FeetInches
 {
 private:
@@ -40,6 +48,10 @@ public:
   bool operator>(const FeetInches &);  // Overloaded >
   bool operator<(const FeetInches &);  // Overloaded <
   bool operator==(const FeetInches &); // Overloaded ==
+
+  // Friends
+  friend ostream &operator<<(ostream &, const FeetInches &);
+  friend istream &operator>>(istream &, FeetInches &);
 };
 
 #endif
