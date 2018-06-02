@@ -35,6 +35,8 @@ public:
   // Overloaded operator functions
   FeetInches operator+(const FeetInches &);  // Overloaded +
   FeetInches operator-(const FeetInches &);  // Overloaded -
+  FeetInches operator++();                   // Overloaded prefix ++
+  FeetInches operator++(int);                // Overloaded postfix ++
 };
 
 #endif

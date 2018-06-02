@@ -27,7 +27,7 @@ void FeetInches::simplify()
 }
 
 //**********************************************
-// Overloaded binary + operator. *
+// Overloaded binary + operator.               *
 //**********************************************
 
 FeetInches FeetInches::operator+(const FeetInches &right)
@@ -41,7 +41,7 @@ FeetInches FeetInches::operator+(const FeetInches &right)
 }
 
 //**********************************************
-// Overloaded binary − operator. *
+// Overloaded binary − operator.               *
 //**********************************************
 
 FeetInches FeetInches::operator-(const FeetInches &right)
@@ -51,5 +51,28 @@ FeetInches FeetInches::operator-(const FeetInches &right)
   temp.inches = inches - right.inches;
   temp.feet = feet - right.feet;
   temp.simplify();
+  return temp;
+}
+
+//**********************************************
+// Overloaded unary prefix ++ operator.        *
+//**********************************************
+
+FeetInches FeetInches::operator++()
+{
+  ++inches;
+  simplify();
+  return *this;
+}
+
+//**********************************************
+// Overloaded unary postfix ++ operator.       *
+//**********************************************
+
+FeetInches FeetInches::operator++(int)
+{
+  FeetInches temp(feet, inches);
+  inches++;
+  simplify();
   return temp;
 }
