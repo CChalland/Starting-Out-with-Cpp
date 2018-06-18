@@ -124,6 +124,27 @@ bool FeetInches::operator==(const FeetInches &right)
 }
 
 //**********************************************
+// Overloaded double operator.                 *
+//**********************************************
+
+FeetInches::operator double()
+{
+  double temp = feet;
+
+  temp += (inches / 12.0);
+  return temp;
+}
+
+//**********************************************
+// Overloaded int operator.                    *
+//**********************************************
+
+FeetInches::operator int()
+{
+  return feet;
+}
+
+//**********************************************
 // Overloaded ostream << operator.             *
 //**********************************************
 

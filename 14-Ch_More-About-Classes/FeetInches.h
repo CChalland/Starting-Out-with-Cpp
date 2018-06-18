@@ -45,9 +45,11 @@ public:
   FeetInches operator-(const FeetInches &);  // Overloaded -
   FeetInches operator++();                   // Overloaded prefix ++
   FeetInches operator++(int);                // Overloaded postfix ++
-  bool operator>(const FeetInches &);  // Overloaded >
-  bool operator<(const FeetInches &);  // Overloaded <
-  bool operator==(const FeetInches &); // Overloaded ==
+  bool operator>(const FeetInches &);        // Overloaded >
+  bool operator<(const FeetInches &);        // Overloaded <
+  bool operator==(const FeetInches &);       // Overloaded ==
+  operator double();                  // Conversion double
+  operator int();                        // Conversion int
 
   // Friends
   friend ostream &operator<<(ostream &, const FeetInches &);
